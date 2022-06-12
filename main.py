@@ -1,6 +1,9 @@
 
 # first getting the inputs
 # t is tests count
+from edge import Edge
+
+
 t = input("Enter tests count :\n") 
 
 # v is variable for nodes count , e is for number of graph edges
@@ -18,7 +21,9 @@ print("Enter pair edge numbers ")
 edges = []
 for i in range(e):
     edge =  input()+"\n"
-    edges.append(edge.split())
+    edges_arr = edge.split()
+    edges.append(Edge(edges_arr[0],edges_arr[1])) 
+
 
 print(chars)
 print(edges)
