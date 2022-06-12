@@ -1,5 +1,5 @@
 class Edge:
     # instance attribute
-    def __init__(self,v0,v1):
-           self.v0 = v0
-           self.v1 = v1
+    def __init__(self,n0,n1):
+           self.n0 = n0
+           self.n1 = n1
