@@ -104,4 +104,4 @@ class CSPBacktracking:
         for node in self.csp.nodes:
             print(node.value)
         print('----------------- CSP Check Result ----------------')
-        print(self.csp.checkWholeNodes)
+        print(self.csp.checkWholeNodes())
