@@ -1,6 +1,8 @@
 
 # first getting the inputs
 # t is tests count
+from backtracking import CSPBacktracking
+from csp import CSP
 from edge import Edge
 from node import Node
 
@@ -34,7 +36,6 @@ for i in range(e):
     v0 = next(node for node in nodes if node.id==int(edges_arr[0]))
     v1 = next(node for node in nodes if node.id==int(edges_arr[1]))
 
-    #v1 = getNode(nodes,edges_arr[1])
     edges.append(Edge(v0,v1)) 
 
 
@@ -44,12 +45,15 @@ for n in nodes:
     for ed in edges:
         if n.id == ed.n0.id :
             if ed.n1 is not n:
-                n.addAdjcentItem(ed.n1)
+                n.addNeighborItem(ed.n1)
         elif n.id == ed.n1.id:
             if ed.n0 is not n:
-                n.addAdjcentItem(ed.n0)
+                n.addNeighborItem(ed.n0)
            
 print(chars)
-print(edges)
+# print(edges)
 
+csp = CSP(nodes)
+cspSolver = CSPBacktracking(csp)
+cspSolver.run()
 
