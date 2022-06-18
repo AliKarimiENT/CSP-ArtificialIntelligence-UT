@@ -53,7 +53,10 @@ for n in nodes:
 print(chars)
 # print(edges)
 
+# instance of CSP
 csp = CSP(nodes)
+# instance of CSPBacktracking with csp as input value
 cspSolver = CSPBacktracking(csp)
+# call run() function from  cspSolver to start processing
 cspSolver.run()
 
